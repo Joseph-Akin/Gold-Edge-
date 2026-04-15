@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Nearby Stores - Gold Edge Paints</title>
+  <!-- Link to the main stylesheet used across all pages -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Site header with navigation - shared across all pages -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Gold Edge</a>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="color-view.html">Color View</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="nearby-store.html">Nearby Store</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section for the nearby store page -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Find Your Nearest Gold Edge Store</h1>
+        <p>Locate our authorized dealers and showrooms in your area. Get directions, contact information, and meet our local store managers.</p>
+      </div>
+    </section>
+
+    <!-- State selection section -->
+    <section class="store-finder">
+      <div class="container">
+        <div class="finder-card">
+          <h2>Select Your State</h2>
+          <select id="state-select" class="state-dropdown">
+            <option value="">Choose your state...</option>
+            <option value="lagos">Lagos</option>
+            <option value="abuja">Abuja (FCT)</option>
+            <option value="kano">Kano</option>
+            <option value="rivers">Rivers</option>
+            <option value="kaduna">Kaduna</option>
+            <option value="oyo">Oyo</option>
+            <option value="delta">Delta</option>
+            <option value="edo">Edo</option>
+            <option value="ondo">Ondo</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stores display section -->
+    <section class="stores-section">
+      <div class="container">
+        <div id="stores-container" class="stores-grid">
+          <!-- Stores will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Link to the main JavaScript file used across all pages -->
+  <script src="script.js"></script>
+</body>
+</html>

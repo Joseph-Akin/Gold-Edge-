@@ -1,0 +1,763 @@
+/* CSS Stylesheet for Gold Edge Paints Website */
+/* This stylesheet is linked to all HTML pages and contains styles for:
+   - index.html: Hero sections, product cards, testimonials, footer
+   - products.html: Product filtering, product cards
+   - color-view.html: Color swatches, preview functionality
+   - about.html: Team section, mission/vision boards, accordions
+   - nearby-store.html: Store finder, store cards, manager information
+   - contact.html: Contact form, header
+*/
+
+:root {
+  color-scheme: dark;
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --panel-soft: #fafafa;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #1d4ed8;
+  --primary-strong: #2563eb;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --border: rgba(31, 41, 55, 0.12);
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Navigation styles - used in header of all pages */
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.site-nav a:hover {
+  color: var(--primary);
+}
+
+.nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Styles for the about.html page */
+.team-section {
+  padding: 4rem 0;
+  background: var(--accent-dark);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.mission-vision {
+  padding: 4rem 0;
+  background: var(--primary);
+}
+
+.mission-board, .vision-board {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.mission-board h2, .vision-board h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+
+.accordion {
+  margin-top: 1rem;
+}
+
+
+.accordion-item {
+  color: rgb(185, 10, 10);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+  color: #ffffff;
+  background: var(--accent-dark);
+  border-radius: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.accordion-header:hover {
+  background: orange;
+  color: whitesmoke;
+}
+
+.accordion-content {
+  padding: 1rem;
+  display: none;
+}
+
+/* Styles for nearby-store.html page */
+.store-finder {
+  padding: 4rem 0;
+  background: var(--panel-soft);
+}
+
+.finder-card {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.finder-card h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.state-dropdown {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.state-dropdown:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.stores-section {
+  padding: 4rem 0;
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.store-card {
+  background: var(--panel);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.store-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 100px rgba(15, 23, 42, 0.12);
+}
+
+.store-header {
+  background: var(--primary);
+  color: white;
+  padding: 1.5rem;
+}
+
+.store-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.store-address {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.store-address p {
+  margin: 0.5rem 0;
+  color: var(--muted);
+}
+
+.store-manager {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.manager-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.manager-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+}
+
+.manager-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.store-actions {
+  padding: 1.5rem;
+  background: var(--panel-soft);
+}
+
+.store-actions .button {
+  width: 100%;
+}
+
+.hero-section,
+.page-content {
+  padding: 4rem 0;
+}
+
+.hero-grid,
+.highlight-grid,
+.feature-grid,
+.testimonial-grid,
+.product-grid,
+.color-grid,
+.inspiration-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 1fr);
+  align-items: center;
+}
+
+.hero-copy h1,
+.page-hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 3.6vw, 4rem);
+  line-height: 1.05;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(29, 78, 216, 0.08);
+  color: var(--primary-strong);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-copy p,
+.page-hero p,
+.highlight-copy p,
+.feature-card p,
+.testimonial-section p,
+.inspiration-card p,
+.product-card p {
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--primary-strong);
+}
+
+.button-secondary {
+  background: white;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.card,
+.product-card,
+.mini-card,
+.preview-swatch,
+.color-swatch,
+.inspiration-card,
+.feature-card,
+.site-footer,
+.testimonial-section,
+.highlight-section {
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.panel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.panel-tag {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-strong);
+}
+
+.brand-list {
+  display: grid;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.color-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+.color-strip span {
+  min-height: 4rem;
+  border-radius: 18px;
+}
+
+.panel-body h2 {
+  margin: 0 0 0.75rem;
+}
+
+.feature-section,
+.testimonial-section,
+.inspiration-section {
+  padding: 3rem 0;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  margin: 0.5rem 0 0;
+  font-size: clamp(2rem, 2.6vw, 2.75rem);
+}
+
+.feature-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature-card {
+  padding: 1.75rem;
+}
+
+.full-width {
+  width: 100%;
+  background: #eef3ff;
+  padding: 3rem 0;
+}
+
+.highlight-section {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.highlight-grid {
+  grid-template-columns: 1.55fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.highlight-copy h2 {
+  margin-top: 0.5rem;
+}
+
+.highlight-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.mini-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.testimonial-grid blockquote {
+  margin: 0;
+  padding: 1.75rem;
+  border-left: 4px solid var(--primary);
+  background: var(--panel-soft);
+}
+
+.testimonial-grid footer {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.page-content {
+  padding-bottom: 4rem;
+}
+
+.page-hero {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-button {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.product-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.product-card {
+  padding: 1.75rem;
+}
+
+.product-card h2 {
+  margin-top: 0;
+}
+
+.product-card ul {
+  margin: 1rem 0 1.25rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.product-card li {
+  margin-bottom: 0.5rem;
+}
+
+.color-grid {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.color-swatch {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  border-radius: 24px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-swatch:hover,
+.color-swatch:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.color-hero {
+  display: grid;
+  justify-items: start;
+}
+
+.color-preview {
+  padding: 2rem;
+  width: min(100%, 540px);
+}
+
+.preview-swatch {
+  height: 240px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #264653 0%, #2a9d8f 100%);
+}
+
+.preview-text {
+  margin-top: 1.5rem;
+}
+
+.preview-text h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.preview-text p {
+  margin: 0.5rem 0 0;
+}
+
+.inspiration-section {
+  margin-top: 3rem;
+}
+
+.inspiration-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.inspiration-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+.site-footer {
+  padding: 2.5rem 0 1rem;
+  margin-top: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.footer-note {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info,
+.contact-form {
+  padding: 2rem;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--primary-strong);
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section,
+  .feature-section,
+  .testimonial-section,
+  .inspiration-section,
+  .page-content,
+  .full-width {
+    padding: 2rem 0;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .color-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
