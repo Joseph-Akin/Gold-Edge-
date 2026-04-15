@@ -76,139 +76,53 @@ accordionHeaders.forEach(header => {
 const storesData = {
   lagos: [
     {
-      name: "Gold Edge Lagos Central",
-      address: "123 Victoria Island, Lagos",
-      phone: "+234 801 234 5678",
+      name: "Gold Edge Lagos",
+      address: "Ipaja, Lagos oppsite Alagolo Police station",
+      phone: "+234 708 471 1665",
       manager: {
-        name: "Adebayo Johnson",
+        name: "Akinbolade Joseph",
         title: "Store Manager",
-        email: "adebayo@goldedgelagos.com",
-        phone: "+234 801 234 5679",
-        photo: "https://via.placeholder.com/80x80?text=AJ"
+        email: "akinboladejoseph@gmail.com",
+        phone: "+234 708 471 1665",
+        photo: "https://valuepaintsng.com/wp-content/uploads/2023/07/card.jpeg"
       }
     },
     {
-      name: "Gold Edge Ikeja Branch",
-      address: "456 Allen Avenue, Ikeja, Lagos",
-      phone: "+234 802 345 6789",
+      name: "Gold Edge Ikeja",
+      address: "Ikeja, Lagos",
+      phone: "+234 708 471 1665",
       manager: {
-        name: "Funmi Adeolu",
+        name: "Joseph Akinbolade",
         title: "Store Manager",
-        email: "funmi@goldedgeikeja.com",
-        phone: "+234 802 345 6790",
-        photo: "https://via.placeholder.com/80x80?text=FA"
-      }
-    }
-  ],
-  abuja: [
-    {
-      name: "Gold Edge Abuja Central",
-      address: "789 Wuse II, Abuja",
-      phone: "+234 803 456 7890",
-      manager: {
-        name: "Chukwuemeka Nwosu",
-        title: "Store Manager",
-        email: "chukwu@goldedgeabuja.com",
-        phone: "+234 803 456 7891",
-        photo: "https://via.placeholder.com/80x80?text=CN"
-      }
-    }
-  ],
-  kano: [
-    {
-      name: "Gold Edge Kano Branch",
-      address: "321 Kano City Center, Kano",
-      phone: "+234 804 567 8901",
-      manager: {
-        name: "Amina Bello",
-        title: "Store Manager",
-        email: "amina@goldedgekano.com",
-        phone: "+234 804 567 8902",
-        photo: "https://via.placeholder.com/80x80?text=AB"
-      }
-    }
-  ],
-  rivers: [
-    {
-      name: "Gold Edge Port Harcourt",
-      address: "654 GRA Phase 2, Port Harcourt",
-      phone: "+234 805 678 9012",
-      manager: {
-        name: "Emmanuel Peters",
-        title: "Store Manager",
-        email: "emmanuel@goldedgeph.com",
-        phone: "+234 805 678 9013",
-        photo: "https://via.placeholder.com/80x80?text=EP"
-      }
-    }
-  ],
-  kaduna: [
-    {
-      name: "Gold Edge Kaduna Central",
-      address: "987 Kaduna Central Market, Kaduna",
-      phone: "+234 806 789 0123",
-      manager: {
-        name: "Ibrahim Musa",
-        title: "Store Manager",
-        email: "ibrahim@goldedgekaduna.com",
-        phone: "+234 806 789 0124",
-        photo: "https://via.placeholder.com/80x80?text=IM"
+        email: "josephakin02@gmal.com",
+        phone: "+234 708 471 1665",
+        photo: "https://valuepaintsng.com/wp-content/uploads/2023/07/card.jpeg"
       }
     }
   ],
   oyo: [
     {
-      name: "Gold Edge Ibadan Branch",
-      address: "147 Dugbe Market, Ibadan",
-      phone: "+234 807 890 1234",
+      name: "Gold Edge Mokola",
+      address: "Adamasingba, Mokola, opp Eliganza, Ibadan",
+      phone: "+234 708 471 1665",
       manager: {
-        name: "Yetunde Olayinka",
+        name: "Joseph Akinbolade",
         title: "Store Manager",
-        email: "yetunde@goldedgeibadan.com",
-        phone: "+234 807 890 1235",
-        photo: "https://via.placeholder.com/80x80?text=YO"
+        email: "josephakinbolade@gmail.com",
+        phone: "+234 708 471 1665",
+        photo: "https://valuepaintsng.com/wp-content/uploads/2023/07/card.jpeg"
       }
-    }
-  ],
-  delta: [
+    },
     {
-      name: "Gold Edge Warri Branch",
-      address: "258 Effurun Roundabout, Warri",
-      phone: "+234 808 901 2345",
+      name: "Gold Edge Mokola",
+      address: "Adamasingba, Mokola, opp Eliganza, Ibadan",
+      phone: "+234 708 471 1665",
       manager: {
-        name: "Osaze Okoro",
+        name: "Joseph Akinbolade",
         title: "Store Manager",
-        email: "osaze@goldedgewarri.com",
-        phone: "+234 808 901 2346",
-        photo: "https://via.placeholder.com/80x80?text=OO"
-      }
-    }
-  ],
-  edo: [
-    {
-      name: "Gold Edge Benin City",
-      address: "369 Ring Road, Benin City",
-      phone: "+234 809 012 3456",
-      manager: {
-        name: "Gladys Eghosa",
-        title: "Store Manager",
-        email: "gladys@goldedgebenin.com",
-        phone: "+234 809 012 3457",
-        photo: "https://via.placeholder.com/80x80?text=GE"
-      }
-    }
-  ],
-  ondo: [
-    {
-      name: "Gold Edge Akure Branch",
-      address: "741 Oyemekun Road, Akure",
-      phone: "+234 810 123 4567",
-      manager: {
-        name: "Tunde Adebayo",
-        title: "Store Manager",
-        email: "tunde@goldedgeakure.com",
-        phone: "+234 810 123 4568",
-        photo: "https://via.placeholder.com/80x80?text=TA"
+        email: "josephakinbolade@gmail.com",
+        phone: "+234 708 471 1665",
+        photo: "https://valuepaintsng.com/wp-content/uploads/2023/07/card.jpeg"
       }
     }
   ]

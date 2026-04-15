@@ -193,7 +193,7 @@ button {
 /* Styles for nearby-store.html page */
 .store-finder {
   padding: 4rem 0;
-  background: var(--panel-soft);
+  background: var(--accent-dark);
 }
 
 .finder-card {
@@ -208,7 +208,7 @@ button {
 
 .finder-card h2 {
   margin-top: 0;
-  color: var(--primary);
+  color: black;
 }
 
 .state-dropdown {
@@ -281,7 +281,7 @@ button {
 .manager-photo {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 1rem;
   object-fit: cover;
   border: 3px solid var(--primary);
 }
