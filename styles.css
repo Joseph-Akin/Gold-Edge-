@@ -9,7 +9,7 @@
 */
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --bg: #f7f7f5;
   --panel: #ffffff;
   --panel-soft: #fafafa;
@@ -801,6 +801,15 @@ button {
 
   .color-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 1.5rem;
   }
 }
 
