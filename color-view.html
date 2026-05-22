@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gold Edge Paints | Color View</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -25,7 +27,7 @@
   <main class="container page-content">
     <section class="page-hero">
       <div>
-        <p class="eyebrow">Interactive color preview</p>
+        <p class="eyebrow">Interactive Color Preview</p>
         <h1>See Gold Edge colors come alive.</h1>
         <p>Click any swatch below and watch the preview panel update instantly with rich paint samples.</p>
       </div>
@@ -33,7 +35,7 @@
         <div class="color-preview card" id="preview">
           <div class="preview-swatch" id="preview-swatch"></div>
           <div class="preview-text">
-            <h2 id="preview-name">Buffalo Blue</h2>
+            <h2 id="preview-name">Apple Green</h2>
             <p id="preview-code">#264653</p>
           </div>
         </div>
@@ -41,47 +43,115 @@
     </section>
 
     <section class="color-grid" aria-label="Color swatches">
-      <button class="color-swatch" data-name="colonial Blue" data-code="#2b5a6d" style="background:#2b5a6d">Colonial Blue</button>
-      <button class="color-swatch" data-name="Romantica" data-code="#41024ad3" style="background:#41024ad3">Romantica</button>
-      <button class="color-swatch" data-name="Golden Yellow" data-code="#f3902d" style="background:#f3902d">Golden Yellow</button>
-      <button class="color-swatch" data-name="Red Oxide" data-code="#5f0000" style="background:#5f0000">Red Oxide</button>
-      <button class="color-swatch" data-name="Burnt Brick" data-code="#e76f51" style="background:#e76f51">Burnt Brick</button>
-      <button class="color-swatch" data-name="Midnight Noir" data-code="#121212" style="background:#121212">Midnight Noir</button>
-      <button class="color-swatch" data-name="Soft Cloud" data-code="#f4f4f4" style="background:#f4f4f4">Soft Cloud</button>
-      <button class="color-swatch" data-name="Velvet Taupe" data-code="#8d99ae" style="background:#8d99ae">Velvet Taupe</button>
+      <button class="color-swatch" data-name="colonial Blue" data-code="#2b5a6d" style="background:#2b5a6d">Colonial
+        Blue</button>
+      <button class="color-swatch" data-name="Romantica" data-code="#41024ad3"
+        style="background:#41024ad3">Romantica</button>
+      <button class="color-swatch" data-name="Golden Yellow" data-code="#f3902d" style="background:#f3902d">Golden
+        Yellow</button>
+      <button class="color-swatch" data-name="Laterite Red" data-code="#5f0000" style="background:#5f0000">Laterite
+        Red</button>
+      <button class="color-swatch" data-name="Burnt Brick" data-code="#e76f51" style="background:#e76f51">Burnt
+        Brick</button>
+      <button class="color-swatch" data-name="Dove Grey" data-code="#8d99ae" style="background:#8d99ae">Dove
+        Grey</button>
+      <button class="color-swatch" data-name="Dove Grey" data-code="#8d99ae" style="background:#8d99ae">Dove
+        Grey</button>
     </section>
 
-    <section class="inspiration-section">
-      <h2>Design inspiration</h2>
-      <p>Use this tool to imagine how colors will look on walls, cabinetry, or trims. Mix bold palettes with subtle neutrals for balanced spaces.</p>
-      <div class="inspiration-grid">
-        <div class="inspiration-card"><strong>Modern Living</strong><p>Pair Buffalo Blue with Soft Cloud for a calm, refined interior.</p></div>
-        <div class="inspiration-card"><strong>Bold Accent</strong><p>Use Midnight Noir for a statement wall paired with Gold Edge trim.</p></div>
-        <div class="inspiration-card"><strong>Warm Exterior</strong><p>Sunset Clay and Velvet Taupe create inviting facades and elegant borders.</p></div>
-      </div>
-    </section>
-  </main>
+    <main class="container page-content">
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">Color Viewer</p>
+          <section class="section-padding container">
+            <div class="viewer-layout fade-in">
+              <!-- Image Display -->
+              <div class="viewer-image-container">
+                <img src="images/room_sample.png" alt="Sample Room">
+                <div class="color-overlay" id="colorOverlay"></div>
+              </div>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <h2>Gold Edge</h2>
-        <p>Premium paint brands, expert advice, and inspired color tools in one place.</p>
-      </div>
-      <div>
-        <h3>Contact</h3>
-        <p><a href="mailto:josephakin02@gmail.com">Email: Goldedge@gmail.com</a></p>
-        <p>Phone: +234 708 471 1665</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-      </div>
-    </div>
-    <p class="footer-note">© 2026 Gold Edge. Designed by Nebula</i></p>
-  </footer>
+              <!-- Controls Panel -->
+              <div class="controls-panel">
+                <h3>Select Color</h3>
+                <p>Choose from our color palette to envision your space.</p>
 
-  <script src="script.js"></script>
+                <h4 style="margin-bottom: 0.8rem; font-size: 0.9rem; color: black;">Neutral Tones</h4>
+                <div class="color-swatch-grid" style="margin-bottom: 2rem;">
+                  <div class="swatch" data-color="rgba(240, 235, 225, 0.4)" style="background: #a6096c;"
+                    title="Alabaster White"></div>
+                  <div class="swatch" data-color="rgba(210, 205, 195, 0.4)" style="background: #D2CDC3;"
+                    title="Stone Grey"></div>
+                  <div class="swatch" data-color="rgba(180, 175, 165, 0.4)" style="background: #B4AFA5;" title="Taupe">
+                  </div>
+                  <div class="swatch" data-color="rgba(80, 80, 80, 0.6)" style="background: #505050;" title="Charcoal">
+                  </div>
+                </div>
+
+                <h4 style="margin-bottom: 0.8rem; font-size: 0.9rem; color: black;">Vibrant Accents</h4>
+                <div class="color-swatch-grid">
+                  <div class="swatch" data-color="rgba(30, 80, 130, 0.5)" style="background: #1E5082;"
+                    title="Ocean Blue"></div>
+                  <div class="swatch" data-color="rgba(100, 150, 110, 0.5)" style="background: #64966E;"
+                    title="Sage Green"></div>
+                  <div class="swatch" data-color="rgba(140, 50, 60, 0.5)" style="background: #8C323C;"
+                    title="Terracotta Red"></div>
+                  <div class="swatch" data-color="rgba(212, 175, 55, 0.4)" style="background: #D4AF37;"
+                    title="Gold Edge Signature"></div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                  <h4 style="margin-bottom: 0.5rem; color: var(black); font-size: 0.8rem; text-transform: uppercase;">
+                    Selected Finish</h4>
+                  <div id="selectedColorName" style="font-size: 1.2rem; font-weight: 600; color: var(--muted);">
+                    Alabaster White</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="inspiration-section">
+            <h2>Design inspiration</h2>
+            <p>Use this tool to imagine how colors will look on walls, cabinetry, or trims. Mix bold palettes with
+              subtle neutrals for balanced spaces.</p>
+            <div class="inspiration-grid">
+              <div class="inspiration-card"><strong>Modern Living</strong>
+                <p>Pair Buffalo Blue with Soft Cloud for a calm, refined interior.</p>
+              </div>
+              <div class="inspiration-card"><strong>Bold Accent</strong>
+                <p>Use Midnight Noir for a statement wall paired with Gold Edge trim.</p>
+              </div>
+              <div class="inspiration-card"><strong>Warm Exterior</strong>
+                <p>Sunset Clay and Velvet Taupe create inviting facades and elegant borders.</p>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2>Gold Edge</h2>
+          <p>Premium paint brands, expert advice, and inspired color tools in one place.</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:josephakin02@gmail.com">Email: Goldedge@gmail.com</a></p>
+          <p>Phone: +234 708 471 1665</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+        </div>
+        <div>
+          <h4>Become a Distributor</h4>
+        </div>
+      </div>
+      <p class="footer-note">© 2026 Gold Edge. Designed by <a href="mailto:Josephakin02@gmail.com">Nebula</href></i></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -47,6 +47,7 @@ const previewCode = document.getElementById('preview-code');
 // Color swatch preview - used in color-view.html
 if (swatches.length && previewSwatch && previewName && previewCode) {
   const updatePreview = (button) => {
+    const number  = button.dataset.number;
     const color = button.dataset.code;
     const name = button.dataset.name;
     previewSwatch.style.background = color;
@@ -179,4 +180,43 @@ window.addEventListener('click', (event) => {
   if (!event.target.closest('.nav-toggle') && !event.target.closest('.site-nav')) {
     siteNav?.classList.remove('open');
   }
+});
+
+
+// Color Viewer
+document.addEventListener('DOMContentLoaded', () => {
+  const swatches = document.querySelectorAll('.swatch');
+  const overlay = document.getElementById('colorOverlay');
+  const colorNameDisplay = document.getElementById('selectedColorName');
+
+  // Initialize with the first color
+  if (swatches.length > 0) {
+    const firstSwatch = swatches[0];
+    firstSwatch.classList.add('active-swatch');
+    overlay.style.backgroundColor = firstSwatch.getAttribute('data-color');
+    colorNameDisplay.textContent = firstSwatch.getAttribute('title');
+  }
+
+  swatches.forEach(swatch => {
+    swatch.addEventListener('click', function() {
+      // Remove active class from all
+      swatches.forEach(s => s.classList.remove('active-swatch'));
+      
+      // Add active class to clicked
+      this.classList.add('active-swatch');
+      
+      // Update overlay color
+      const colorVal = this.getAttribute('data-color');
+      overlay.style.backgroundColor = colorVal;
+      
+      // Update text
+      colorNameDisplay.textContent = this.getAttribute('title');
+      
+      // Subtle pulse animation on click
+      overlay.style.opacity = '0.7';
+      setTimeout(() => {
+        overlay.style.opacity = '1';
+      }, 150);
+    });
+  });
 });

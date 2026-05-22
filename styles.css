@@ -21,6 +21,7 @@
   --accent-dark: #d97706;
   --border: rgba(31, 41, 55, 0.12);
   --shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+  --grey: #5b5b5b; 
 }
 
 * {
@@ -95,14 +96,16 @@ button {
 
 .site-nav a:hover {
   color: var(--primary);
+  
 }
 
 .nav-toggle {
   display: none;
   border: none;
-  background: transparent;
+  border-radius: 11px;
   font-size: 1.5rem;
   cursor: pointer;
+  color: #1d4ed8;
 }
 
 /* Styles for the about.html page */
@@ -208,7 +211,7 @@ button {
 
 .finder-card h2 {
   margin-top: 0;
-  color: black;
+  color: var(--primary);
 }
 
 .state-dropdown {
@@ -378,19 +381,43 @@ button {
   transform: translateY(-1px);
 }
 
+.home-button-primary {
+  padding: 0.7rem 1.2rem;
+  background: var(--primary-strong);
+  border: 2px solid;
+  border-color: white;
+  color: white;
+}
+
+.home-button-primary:hover{
+  background-color: var(--primary);
+  border-color: var(--border-color);
+}
+
 .button-primary {
+  padding: 0.7rem 1.2rem;
   background: var(--primary);
+  border: 2px solid;
+  border-color: var(--primary-strong);
   color: white;
 }
 
 .button-primary:hover {
-  background: var(--primary-strong);
+  background: transparent;
+  color: black;
 }
 
 .button-secondary {
   background: white;
   color: var(--text);
   border-color: var(--border);
+}
+
+.button-secondary:hover {
+  border: 2px solid;
+  border-color: var(--accent);
+  color: var(--text);
+  border-color: var(--primary-strong);
 }
 
 .card,
@@ -537,8 +564,10 @@ button {
 
 .filter-button {
   border: 1px solid var(--border);
-  background: white;
-  padding: 0.8rem 1.2rem;
+  background: rgba(29, 78, 216, 0.08);
+  color: var(--text);
+  font-display: var(--text);
+  padding: 0.5rem 0.85rem;
   border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -683,7 +712,7 @@ button {
 
 .contact-item p {
   margin: 0;
-  color: var(--muted);
+  color:var(--muted);
 }
 
 .form-group {
@@ -696,19 +725,27 @@ button {
   font-weight: 500;
 }
 
+.form-group:hover{
+  color: var(--primary);  
+}
+
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  background: var(--panel-soft);
+  border-radius: 22px;
   font-family: inherit;
   font-size: 1rem;
+  color: var(--text);
 }
 
 .form-group textarea {
   resize: vertical;
   min-height: 100px;
+  resize: none;
+  overflow-y: auto;
 }
 
 @media (max-width: 900px) {
@@ -727,16 +764,21 @@ button {
     top: 100%;
     right: 0;
     left: 0;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
   }
 
   .site-nav.open {
     display: flex;
   }
 
-  .nav-toggle {
+  .nav-toggle{
     display: inline-flex;
-  }
+    background: white;
+    color: black;
+    border: none;
+    border-radius: none;
+}
+
 }
 
 @media (max-width: 640px) {
@@ -761,3 +803,50 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
 }
+
+
+/* Color viewer part */
+:root {
+  --bg-dark: #0f1014;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --gold-primary: #D4AF37;
+  --gold-light: #FFDF7F;
+  --text-main: #F4F4F5;
+  --text-muted: #A1A1AA;
+  --border-color: rgba(212, 175, 55, 0.2);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --glass-bg: rgba(15, 16, 20, 0.7);
+  --glass-blur: blur(12px);
+}
+
+/* --- Color Viewer Page --- */
+.viewer-layout { display: grid; grid-template-columns: 1fr 400px; gap: 3rem; align-items: start; }
+.viewer-image-container {
+  position: relative; border-radius: 12px; overflow: hidden;
+  box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+.viewer-image-container img { width: 100%; display: block; }
+
+
+/* Mix blend mode magic to tint the white room image */
+.color-overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: transparent;
+  mix-blend-mode: multiply; /* Overlay color directly to the room */
+  transition: background-color 0.4s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.controls-panel { background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+.controls-panel h3 { margin-bottom: 1rem; color: var(--text-main); }
+.controls-panel p { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem; }
+
+.color-swatch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.swatch {
+  width: 100%; aspect-ratio: 1; border-radius: 50%; cursor: pointer;
+  border: 3px solid transparent; transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.swatch:hover { transform: scale(1.1); }
+.swatch.active-swatch { border-color: var(--text-main); transform: scale(1.1); }
