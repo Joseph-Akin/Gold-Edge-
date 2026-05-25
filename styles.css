@@ -687,6 +687,10 @@ button {
   text-align: center;
 }
 
+.explore :hover {
+ color: var(--primary); 
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
