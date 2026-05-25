@@ -391,7 +391,7 @@ button {
 
 .home-button-primary:hover{
   background-color: var(--primary);
-  border-color: var(--border-color);
+  border-color: var(--border);
 }
 
 .button-primary {
@@ -732,10 +732,10 @@ button {
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.9rem 1rem;
   border: 1px solid var(--border);
   background: var(--panel-soft);
-  border-radius: 22px;
+  border-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
   color: var(--text);
